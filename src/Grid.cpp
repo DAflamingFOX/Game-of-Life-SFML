@@ -107,7 +107,7 @@ void Grid::draw(sf::RenderWindow &window) const
         {
             if (grid[y][x])
             {
-                cellShape.setPosition({x * cellSize, y * cellSize});
+                cellShape.setPosition({static_cast<float>(x * cellSize), static_cast<float>(y * cellSize)});
                 window.draw(cellShape);
             }
         }
